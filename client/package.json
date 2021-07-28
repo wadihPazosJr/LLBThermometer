@@ -1,0 +1,70 @@
+{
+  "name": "client",
+  "proxy": "http://localhost:4000/",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@syncfusion/ej2": "^19.2.47",
+    "@syncfusion/ej2-base": "^19.2.47",
+    "@syncfusion/ej2-buttons": "^19.2.47",
+    "@syncfusion/ej2-dropdowns": "^19.2.47",
+    "@syncfusion/ej2-file-utils": "^19.2.44",
+    "@syncfusion/ej2-react-barcode-generator": "^19.2.44",
+    "@syncfusion/ej2-react-base": "^19.2.44",
+    "@syncfusion/ej2-react-buttons": "^19.2.47",
+    "@syncfusion/ej2-react-calendars": "^19.2.47",
+    "@syncfusion/ej2-react-charts": "^19.2.47",
+    "@syncfusion/ej2-react-circulargauge": "^19.2.47",
+    "@syncfusion/ej2-react-diagrams": "^19.2.46",
+    "@syncfusion/ej2-react-documenteditor": "^19.2.47",
+    "@syncfusion/ej2-react-dropdowns": "^19.2.47",
+    "@syncfusion/ej2-react-filemanager": "^19.2.44",
+    "@syncfusion/ej2-react-gantt": "^19.2.47",
+    "@syncfusion/ej2-react-grids": "^19.2.47",
+    "@syncfusion/ej2-react-heatmap": "^19.2.44",
+    "@syncfusion/ej2-react-inplace-editor": "^19.2.46",
+    "@syncfusion/ej2-react-inputs": "^19.2.46",
+    "@syncfusion/ej2-react-kanban": "^19.2.47",
+    "@syncfusion/ej2-react-layouts": "^19.2.44",
+    "@syncfusion/ej2-react-lineargauge": "^19.2.44",
+    "@syncfusion/ej2-react-lists": "^19.2.47",
+    "@syncfusion/ej2-react-maps": "^19.2.44",
+    "@syncfusion/ej2-react-navigations": "^19.2.46",
+    "@syncfusion/ej2-react-notifications": "^19.2.44",
+    "@syncfusion/ej2-react-pdfviewer": "^19.2.47",
+    "@syncfusion/ej2-react-pivotview": "^19.2.46",
+    "@syncfusion/ej2-react-popups": "^19.2.46",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.3",
+    "web-vitals": "^1.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

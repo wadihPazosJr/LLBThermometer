@@ -1,7 +1,5 @@
-import "./index.css";
-/**
- * Sample for Ranges
- */
+/* import "./index.css"; */
+
 import * as React from "react";
 import {
   LinearGaugeComponent,
@@ -82,16 +80,15 @@ export class Range extends React.Component {
   }
   render() {
     return (
-      <div className="thermometerContainer">
-        <div className="thermometerContent">
-          {/* <div className="control-section row">
-          <div className="col-lg-8"> */}
+      <div className="container-sm">
+        <div className="col-sm-4 col-sm-offset-4 thermometer-container">
           <LinearGaugeComponent
             ref={(gauge) => (this.gaugeInstance = gauge)}
             axisLabelRender={this.onLabelRender.bind(this)}
-            width="400px"
+            width="200px"
             height="400px"
             id="lineargauge"
+            background="transparent"
             container={{
               animationduration: 3000,
               width: 13,
@@ -170,30 +167,42 @@ export class Range extends React.Component {
             </AxesDirective>
           </LinearGaugeComponent>
 
-          <div>Current amount: ${this.state.gaugeValue}</div>
+          <h5 className="thermometer-info">
+            Current amount raised:{" "}
+            <span className="amount">${this.state.gaugeValue}</span>
+          </h5>
 
           {this.state.matchGoal - this.state.gaugeValue > 0 ? (
-            <div>
-              ${this.state.matchGoal - this.state.gaugeValue} left for Walmart
-              to match ${this.state.matchGoal} raised!
-            </div>
+            <h5 className="thermometer-info">
+              <span className="amount">
+                ${this.state.matchGoal - this.state.gaugeValue}
+              </span>{" "}
+              left for Walmart to match{" "}
+              <span className="amount">${this.state.matchGoal}</span> raised!
+            </h5>
           ) : (
-            <div>Walmart has matched ${this.state.matchGoal} raised!</div>
+            <h5 className="thermometer-info-success">
+              Walmart has matched{" "}
+              <span className="amount">${this.state.matchGoal}</span> raised!
+            </h5>
           )}
           {this.state.gaugeValue >= this.state.donationGoal ? (
-            <div>Goal of ${this.state.donationGoal} reached! Thank you!</div>
+            <h5 className="thermometer-info-success">
+              Goal of <span className="amount">${this.state.donationGoal}</span>{" "}
+              reached! Thank you!
+            </h5>
           ) : (
-            <div>
-              ${this.state.donationGoal - this.state.gaugeValue} left to reach
-              our goal!
-            </div>
+            <h5 className="thermometer-info">
+              <span className="amount">
+                ${this.state.donationGoal - this.state.gaugeValue}
+              </span>{" "}
+              left to reach our goal!
+            </h5>
           )}
           {this.state.currentDonor !== "" && (
-            <DonorShoutout
-              donation={this.state.currentDonorAmount}
-              name={this.state.currentDonor}
-            />
+            <DonorShoutout name={this.state.currentDonor} />
           )}
+          <img width="100" height="100" src="./pictures/frame.png"></img>
         </div>
       </div>
     );

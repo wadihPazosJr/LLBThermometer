@@ -242,14 +242,14 @@ app.post("/addDonation", async (req, res) => {
 
   let lastName = nameArray.join(" ");
 
-  let giftId;
+  let giftId, constituentId;
   //Create constituent if it doesn't already exist or get their id
   try {
-    let constituentId = await createConstituentIfItDoesntAlreadyExist({
+    constituentId = await createConstituentIfItDoesntAlreadyExist({
       address: {
         address_lines: donation.address.addressLines,
         city: donation.address.city,
-        country: donation.address.country,
+        country: "United States",
         postal_code: donation.address.postalCode,
         state: donation.address.state,
         type: "Home",
@@ -318,7 +318,8 @@ app.post("/addDonation", async (req, res) => {
     donorName: donation.name,
     donationAmount: donation.monthly ? donation.amount * 12 : donation.amount,
     credited: donation.anonymous ? true : false,
-    giftId: giftId,
+    giftId: giftId === null ? "error with RENXT" : giftId,
+    consituentId: constituentId === null ? "error with RENXT" : constituentId,
     paymentInfo: {
       nameOnCard: donation.name,
       company: donation.company,

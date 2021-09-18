@@ -142,7 +142,7 @@ function getValidAccessToken() {
   });
 }
 
-app.use(express.static(path.join(__dirname, "build")));
+app.use(express.static(path.join(__dirname + "/client/build")));
 
 // Need to implement this
 app.use(async (req, res, next) => {
@@ -453,7 +453,7 @@ app.get("/getUpdate", async (req, res) => {
 });
 
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname + "/build/index.html"));
+  res.sendFile(path.join(__dirname + "/client/build/index.html"));
 });
 
 client.connect().then(() => {

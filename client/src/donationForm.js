@@ -130,14 +130,13 @@ export class DonationForm extends React.Component {
   }
 
   handleSubmit(e) {
-    //When someone picks other, the value they input is a string, make sure to change to an int later on.
     e.preventDefault();
     console.log(this.state);
-    console.log("hit this");
+    console.log("hit this handle submit");
 
     if (this.validate()) {
       console.log("success");
-      fetch("http://localhost:5000/addDonation", {
+      fetch("/addBackUpDonation", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -166,7 +165,8 @@ export class DonationForm extends React.Component {
             alert("Thank you!");
             window.location.href = "/";
           } else {
-            alert("Something went wrong, please refresh and try again.");
+            alert("Something went wrong, please try again.");
+            window.location.reload();
           }
         })
         .catch((err) =>
@@ -236,7 +236,11 @@ export class DonationForm extends React.Component {
     return (
       <div className="container-sm">
         <div className="col-md-6 col-md-offset-3 donation-form-container">
-          <form className="row g-3">
+          <form
+            data-formtype="bbCheckout"
+            onSubmit={this.handleSubmit}
+            className="row g-3"
+          >
             <div className="col-12">
               <label className="form-label">Donation Amount</label>
               <ul className="radio-list">
@@ -733,12 +737,10 @@ export class DonationForm extends React.Component {
             </div>
             <br />
             <br />
-            <div>
-              <ButtonComponent onClick={this.handleSubmit}>
-                Donate
-              </ButtonComponent>
-            </div>
           </form>
+          <button id="donate-now" onClick={this.handleSubmit}>
+            Donate now!
+          </button>
         </div>
       </div>
     );

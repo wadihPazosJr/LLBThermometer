@@ -34,7 +34,7 @@ app.get("/getUpdate", async (req, res) => {
           {
             $group: {
               _id: null,
-              total: { $sum: "$donationAmount" },
+              total: { $sum: "$amount" },
             },
           },
         ])

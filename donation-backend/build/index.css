@@ -1,0 +1,100 @@
+/* .formContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.formCenter {
+  text-align: left;
+  background-color: grey;
+  padding: 25px;
+  margin-top: 50px;
+  border-radius: 15px;
+  margin-bottom: 50px;
+}
+
+.thermometerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.thermometerContent {
+  text-align: center;
+  background-color: grey;
+  padding: 25px;
+  margin-top: 50px;
+  border-radius: 15px;
+  margin-bottom: 50px;
+}
+
+#lineargauge_LinearGaugeBorder {
+  fill: grey;
+}
+ */
+
+.donation-form-container {
+  background-color: #faf0e6;
+  padding: 50px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border-radius: 30px;
+}
+
+.thermometer-container {
+  background-color: #faf0e6;
+  padding: 50px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border-radius: 30px;
+  text-align: center;
+}
+
+.thermometer-info {
+  padding-bottom: 15px;
+}
+
+.thermometer-info-success {
+  color: #008000;
+  padding-bottom: 15px;
+}
+
+.radio-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.radio-list li {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.donor-info {
+  padding-bottom: 15px;
+  animation: fadeinout 4s linear 1 forwards;
+}
+
+.amount {
+  font-weight: bold;
+}
+
+body {
+  background: url("./pictures/bella.jpeg") no-repeat;
+  background-size: cover;
+}
+
+@keyframes fadeinout {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.error {
+  color: red;
+}

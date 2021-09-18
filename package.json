@@ -1,5 +1,8 @@
 {
   "name": "llbthermometer",
+  "scripts": {
+    "start": "node ./donation-backend/index.js"
+  },
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",

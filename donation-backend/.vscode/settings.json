@@ -1,0 +1,4 @@
+{
+  "appService.defaultWebAppToDeploy": "/subscriptions/21f1a766-2505-4f3c-94da-1bd478fd027b/resourceGroups/rg-thermometer-prod-eastus2-001/providers/Microsoft.Web/sites/app-thermometer-prod-eastus2-001",
+  "appService.deploySubpath": "."
+}

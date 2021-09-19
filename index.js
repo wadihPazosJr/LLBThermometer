@@ -157,7 +157,7 @@ app.use(async (req, res, next) => {
 app.use(cors());
 app.use(express.json());
 
-app.post("/addDonation", async (req, res) => {
+app.post("/api/addDonation", async (req, res) => {
   const body = req.body;
 
   const transactionToken = body.transactionToken;
@@ -376,7 +376,7 @@ app.post("/addDonation", async (req, res) => {
   }
 });
 
-app.post("/addBackUpDonation", async (req, res) => {
+app.post("/api/addBackUpDonation", async (req, res) => {
   const donationInfo = req.body;
 
   try {
@@ -406,7 +406,7 @@ app.post("/addBackUpDonation", async (req, res) => {
   }
 });
 
-app.get("/getUpdate", async (req, res) => {
+app.get("/api/getUpdate", async (req, res) => {
   try {
     let docCount = await collection.countDocuments();
 

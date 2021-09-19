@@ -32,7 +32,7 @@ export class Range extends React.Component {
 
   componentDidMount() {
     this.interval = setInterval(() => {
-      fetch("/getUpdate")
+      fetch("/api/getUpdate")
         .then((res) => res.json())
         .then((res) => {
           if (res.success) {

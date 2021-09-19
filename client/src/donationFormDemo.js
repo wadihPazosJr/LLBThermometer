@@ -92,7 +92,7 @@ export class DonationFormDemo extends React.Component {
     });
 
     $(document).on("checkoutComplete", (e) => {
-      fetch("/addDonation", {
+      fetch("/api/addDonation", {
         method: "POST",
         body: JSON.stringify({
           transactionToken: e.detail.transactionToken,

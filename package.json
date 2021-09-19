@@ -1,7 +1,8 @@
 {
   "name": "llbthermometer",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
   },
   "version": "1.0.0",
   "main": "index.js",
